@@ -27,51 +27,105 @@ namespace Assignment5.Models
                     new Book
                     {
                         Title = "Les Miserables",
-                        Author = "Victor Hugo",
+                        AuthorFirst = "Victor",
+                        AuthorLast = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-045149439",
-                        Category = "Fiction, Classic",
-                        Price = 9.95F
+                        Category = "Fiction",
+                        Genre = "Classic",
+                        Price = 9.95F,
+                        Pages = 1488
                     },
 
                     new Book
                     {
                         Title = "Team of Rivals",
-                        Author = "Doris Kearns Goodwin",
+                        AuthorFirst = "Doris Kearns",
+                        AuthorLast = "Goodwin",
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
-                        Category = "Non-Fiction, Biography",
-                        Price = 14.58F
+                        Category = "Non-Fiction",
+                        Genre = "Biography",
+                        Price = 14.58F,
+                        Pages = 944
                     },
 
                     new Book
                     {
                         Title = "The Snowball",
-                        Author = "Alice Schroeder",
+                        AuthorFirst = "Alice",
+                        AuthorLast = "Schroeder",
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
-                        Category = "Non-Fiction, Biography",
-                        Price = 21.54F
+                        Category = "Non-Fiction",
+                        Genre = "Biography",
+                        Price = 21.54F,
+                        Pages = 832
                     },
 
                     new Book
                     {
                         Title = "Deep Work",
-                        Author = "Cal Newport",
+                        AuthorFirst = "Cal",
+                        AuthorLast = "Newport",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
-                        Category = "Non-Fiction, Self-Help",
-                        Price = 14.99F
+                        Category = "Non-Fiction",
+                        Genre = "Self-Help",
+                        Price = 14.99F,
+                        Pages = 304
                     },
 
                     new Book
                     {
                         Title = "Unbroken",
-                        Author = "Laura Hillenbrand",
+                        AuthorFirst = "Laura",
+                        AuthorLast = "Hillenbrand",
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
-                        Category = "Non-Fiction, Historical",
-                        Price = 13.33F
+                        Category = "Non-Fiction",
+                        Genre = "Historical",
+                        Price = 13.33F,
+                        Pages = 528
+                    },
+
+                    new Book
+                    {
+                        Title = "Hatchet",
+                        AuthorFirst = "Gary",
+                        AuthorLast = "Paulsen",
+                        Publisher = "Simon & Schuster",
+                        ISBN = "9781416925088",
+                        Category = "Fiction",
+                        Genre = "Adventure",
+                        Price = 15.88F,
+                        Pages = 198
+                    },
+
+                    new Book
+                    {
+                        Title = "The Book of Mormon",
+                        AuthorFirst = "Mormon",
+                        AuthorLast = "",
+                        Publisher = "Harmony",
+                        ISBN = "9780385513166",
+                        Category = "Gospel",
+                        Genre = "Religious",
+                        Price = 17.90F,
+                        Pages = 531
+                    },
+
+                    new Book
+                    {
+                        Title = "The Giver",
+                        AuthorFirst = "Lois",
+                        AuthorLast = "Lowry",
+                        Publisher = "Houghton Mifflin Harcourt",
+                        ISBN = "9780547424774",
+                        Category = "Fiction",
+                        Genre = "SciFi",
+                        Price = 39.13F,
+                        Pages = 222
                     }
                 );
 

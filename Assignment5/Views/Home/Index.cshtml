@@ -32,6 +32,9 @@
             <th>
                 Price
             </th>
+            <th>
+                Pages
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -43,7 +46,7 @@
                     @x.Title
                 </td>
                 <td>
-                    @x.Author
+                    @x.AuthorFirst @x.AuthorLast
                 </td>
                 <td>
                     @x.Publisher
@@ -55,7 +58,10 @@
                     @x.Category
                 </td>
                 <td>
-                    @x.Price
+                    $@x.Price
+                </td>
+                <td>
+                    @x.Pages
                 </td>
             </tr>
          }

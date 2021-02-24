@@ -18,7 +18,9 @@ namespace Assignment5.Models
         [Required]
         public string Title { get; set; }
         [Required]
-        public string Author { get; set; }
+        public string AuthorFirst { get; set; }
+        [Required]
+        public string AuthorLast { get; set; }
         [Required]
         public string Publisher { get; set; }
         [Required]
@@ -27,6 +29,11 @@ namespace Assignment5.Models
         [Required]
         public string Category { get; set; }
         [Required]
+        public string Genre { get; set; }
+        [Required]
         public float Price { get; set; }
+        [Required]
+        public int Pages { get; set; }
     }
 }
+

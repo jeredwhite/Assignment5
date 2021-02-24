@@ -13,11 +13,14 @@ namespace Assignment5.Migrations
                     BookId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: false),
-                    Author = table.Column<string>(nullable: false),
+                    AuthorFirst = table.Column<string>(nullable: false),
+                    AuthorLast = table.Column<string>(nullable: false),
                     Publisher = table.Column<string>(nullable: false),
                     ISBN = table.Column<string>(nullable: false),
                     Category = table.Column<string>(nullable: false),
-                    Price = table.Column<float>(nullable: false)
+                    Genre = table.Column<string>(nullable: false),
+                    Price = table.Column<float>(nullable: false),
+                    Pages = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
