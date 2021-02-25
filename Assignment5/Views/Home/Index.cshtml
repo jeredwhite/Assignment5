@@ -2,7 +2,7 @@
     ViewData["Title"] = "My Books";
 }
 
-@model IQueryable<Book>
+@model BookListViewModel
 
 <div class="text-center">
     <h1 class="display-4">Check Out My Books</h1>
@@ -39,8 +39,8 @@
     </thead>
     <tbody>
 
-        @foreach (var x in Model)
-         {
+        @foreach (var x in Model.Books)
+        {
             <tr>
                 <td>
                     @x.Title
@@ -64,6 +64,12 @@
                     @x.Pages
                 </td>
             </tr>
-         }
+        }
     </tbody>
 </table>
+
+<div page-model="@Model.PagingInfo" page-action="Index"></div>
+
+
+<!--https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp-->
+<!--https://icons.getbootstrap.com/icons/instagram/-->
