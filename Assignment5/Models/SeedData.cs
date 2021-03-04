@@ -30,7 +30,7 @@ namespace Assignment5.Models
                         AuthorFirst = "Victor",
                         AuthorLast = "Hugo",
                         Publisher = "Signet",
-                        ISBN = "978-045149439",
+                        ISBN = "978-0451419439",
                         Category = "Fiction",
                         Genre = "Classic",
                         Price = 9.95F,
@@ -87,6 +87,71 @@ namespace Assignment5.Models
                         Genre = "Historical",
                         Price = 13.33F,
                         Pages = 528
+                    },
+
+                    new Book
+                    {
+                        Title = "American Ulysses",
+                        AuthorFirst = "Ronald",
+                        AuthorLast = "White",
+                        Publisher = "Random House",
+                        ISBN = "978-0812981254",
+                        Category = "Non-Fiction",
+                        Genre = "Biography",
+                        Price = 11.61F,
+                        Pages = 864
+                    },
+
+                    new Book
+                    {
+                        Title = "The Great Train Robbery",
+                        AuthorFirst = "Michael",
+                        AuthorLast = "Crichton",
+                        Publisher = "Vintage",
+                        ISBN = "978-0804171281",
+                        Category = "Fiction",
+                        Genre = "Historical Fiction",
+                        Price = 15.95F,
+                        Pages = 288
+                    },
+
+                    new Book
+                    {
+                        Title = "It's Your Ship",
+                        AuthorFirst = "Michael",
+                        AuthorLast = "Abrashoff",
+                        Publisher = "Grand Central Publishing",
+                        ISBN = "978-1455523023",
+                        Category = "Non-Fiction",
+                        Genre = "Self-Help",
+                        Price = 21.66F,
+                        Pages = 240
+                    },
+
+                    new Book
+                    {
+                        Title = "The Virgin Way",
+                        AuthorFirst = "Richard",
+                        AuthorLast = "Branson",
+                        Publisher = "Portfolio",
+                        ISBN = "978-1591847984",
+                        Category = "Non-Fiction",
+                        Genre = "Business",
+                        Price = 29.16F,
+                        Pages = 400
+                    },
+
+                    new Book
+                    {
+                        Title = "Sycamore Row",
+                        AuthorFirst = "John",
+                        AuthorLast = "Grisham",
+                        Publisher = "Bantam",
+                        ISBN = "978-0553393613",
+                        Category = "Fiction",
+                        Genre = "Thrillers",
+                        Price = 15.03F,
+                        Pages = 642
                     },
 
                     new Book

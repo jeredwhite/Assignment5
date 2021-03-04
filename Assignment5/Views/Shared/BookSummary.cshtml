@@ -1,0 +1,31 @@
+﻿
+@model Book
+
+
+
+<tr>
+    <td>
+        @Model.Title
+    </td>
+    <td>
+        @Model.AuthorFirst @Model.AuthorLast
+    </td>
+    <td>
+        @Model.Publisher
+    </td>
+    <td>
+        @Model.ISBN
+    </td>
+    <td>
+        @Model.Category
+    </td>
+    <td>
+        @Model.Genre
+    </td>
+    <td data-toggle="tooltip" data-placement="top" title="Prices are subject to change.">
+        $@Model.Price
+    </td>
+    <td>
+        @Model.Pages
+    </td>
+</tr>

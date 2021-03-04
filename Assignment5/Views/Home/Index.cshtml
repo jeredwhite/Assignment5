@@ -17,7 +17,6 @@
 <div class="text-center">
     <h1 class="display-4">Check Out My Books</h1>
     <br />
-    <p>Check out this list of books:</p>
 </div>
 
 
@@ -37,6 +36,9 @@
                 ISBN
             </th>
             <th>
+                Genre
+            </th>
+            <th>
                 Category
             </th>
             <th>
@@ -51,37 +53,17 @@
 
         @foreach (var x in Model.Books)
         {
-            <tr>
-                <td>
-                    @x.Title
-                </td>
-                <td>
-                    @x.AuthorFirst @x.AuthorLast
-                </td>
-                <td>
-                    @x.Publisher
-                </td>
-                <td>
-                    @x.ISBN
-                </td>
-                <td>
-                    @x.Category
-                </td>
-                <td data-toggle="tooltip" data-placement="top" title="Prices are subject to change.">
-                    $@x.Price
-                </td>
-                <td>
-                    @x.Pages
-                </td>
-            </tr>
+            <partial name="BookSummary" model="x" />
         }
     </tbody>
 </table>
 
-<!-- Create a Previous and Next button through BS-->
+<!-- Create a Previous and Next button through-->
 <div class="text-center">
     <a style="display: inline;" class="pager" href="../"><< Previous</a>
-    <div style="display: inline;" page-model="@Model.PagingInfo" page-action="Index"></div>
+    <div style="display: inline;" page-model="@Model.PagingInfo" page-action="Index">
+        page-url-category="@Model.CurrentCategory"
+    </div>
     <a style="display: inline;" class="pager" href="/Books/P2">Next >></a>
 </div>
 
@@ -90,13 +72,13 @@
 
 <!--Create a secrete hidden message through BS-->
 <div class="container">
-    <h3>Click on the button to view a secret message hidden through Bootstrap</h3>
+    <h3>Click to view a secret message hidden through Bootstrap</h3>
     <br />
     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Secret Message</button>
     <div id="demo" class="collapse">
         <br />
         <br />
-        <p>Dr. Hilton + Reeves is a solid combo</p>
+        <p>Dr. Hilton + our TA's = solid combo</p>
     </div>
 </div>
 
