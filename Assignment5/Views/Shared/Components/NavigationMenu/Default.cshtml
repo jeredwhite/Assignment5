@@ -8,7 +8,8 @@
 @foreach (string category in Model)
 {
     <div style="max-width: 250px; display: inline-block">
-        <a class="btn btn-block btn-outline-secondary" asp-action="Index" asp-controller="Home"
-        asp-route-category="@category" asp-route-page="1">@category</a>
+        <a class="btn btn-block @(category == ViewBag.SelectedCategory ? "btn-primary" : "btn-outline-secondary")"
+           asp-action="Index" asp-controller="Home" asp-route-category="@category" 
+           asp-route-page="1">@category</a>
     </div>
 }

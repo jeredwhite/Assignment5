@@ -18,6 +18,8 @@ namespace Assignment5.Components
 
         public IViewComponentResult Invoke()
         {
+            ViewBag.SelectedCategory = RouteData?.Values["category"];
+
             return View(repository.Books
                 .Select(x => x.Genre)
                 .Distinct()

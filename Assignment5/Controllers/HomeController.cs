@@ -39,10 +39,11 @@ namespace Assignment5.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalNumbItems = _repository.Books.Count()
+                    TotalNumbItems = category == null ? _repository.Books.Count() :
+                        _repository.Books.Where(x => x.Genre == category).Count()
                 },
                 CurrentCategory = category
-            });
+            }); ;
         }
 
         public IActionResult Privacy()
