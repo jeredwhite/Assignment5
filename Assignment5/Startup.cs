@@ -25,15 +25,21 @@ namespace Assignment5
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //I would love to add comments, but I honestly dont know what we're doing. Added 2 services here
             services.AddControllersWithViews();
 
             services.AddDbContext<BookstoreDbContext>(options =>
            {
-               options.UseSqlServer(Configuration["ConnectionStrings:BookstoreConnection"]);
+               options.UseSqlite(Configuration["ConnectionStrings:BookstoreConnection"]);
+               //options.UseSqlServer(Configuration["ConnectionStrings:BookstoreConnection"]);
+               //change here and appsettings.json to work with SQLserver instead
            });
 
             services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();
+
+            services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +57,8 @@ namespace Assignment5
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
@@ -75,6 +83,8 @@ namespace Assignment5
                     new {Controller = "Home", action = "Index"});
 
                 endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapRazorPages();
 
                     // Old endpoint
                     //name: "default",

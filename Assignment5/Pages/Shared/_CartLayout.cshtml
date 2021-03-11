@@ -9,7 +9,6 @@
 </head>
 <body>
     <header>
-
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Assignment 8</a>
@@ -35,13 +34,18 @@
         <vc:navigation-menu />
     </div>
 
-    <br />
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="bg-dark text-white p-2">
+        <span class="navbar-brand ml-2">Enjoy these books yourself!</span>
     </div>
+    <div class="m-1 p-1">
+        @RenderBody()
+    </div>
+
+    <!--<div class="container">
+        <main role="main" class="pb-3">
+            RenderBody()
+        </main>
+    </div>-->
 
     <footer class="border-top footer text-muted">
         <div class="container">
