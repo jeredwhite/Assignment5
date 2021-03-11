@@ -9,17 +9,17 @@ namespace Assignment5.Models
     {
         public List<CartLine> Lines { get; set; } = new List<CartLine>();
 
-        public void AddItem (Book novel, int qty)
+        public virtual void AddItem (Book book, int qty)
         {
             CartLine line = Lines
-                .Where(b => b.Book.BookId == novel.BookId)
+                .Where(b => b.Book.BookId == book.BookId)
                 .FirstOrDefault();
 
             if (line == null)
             {
                 Lines.Add(new CartLine
                 {
-                    Book = novel,
+                    Book = book,
                     Quantity = qty
                 });
             }
@@ -29,10 +29,10 @@ namespace Assignment5.Models
             }
         }
 
-        public void RemoveLine(Book novel) =>
-            Lines.RemoveAll(x => x.Book.BookId == novel.BookId);
+        public virtual void RemoveLine(Book book) =>
+            Lines.RemoveAll(x => x.Book.BookId == book.BookId);
 
-        public void Clear() => Lines.Clear();
+        public virtual void Clear() => Lines.Clear();
 
         public float ComputeTotalSum() => Lines.Sum(e => e.Book.Price * e.Quantity);
 

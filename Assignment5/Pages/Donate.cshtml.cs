@@ -42,5 +42,18 @@ namespace Assignment5.Pages
 
             return RedirectToPage(new { returnUrl = returnUrl });
         }
+
+        public IActionResult OnPostRemove(long bookId, string returnUrl)
+        {
+            Book book = repository.Books.FirstOrDefault(b => b.BookId == bookId);
+
+            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+
+            Cart.RemoveLine(book);
+
+            HttpContext.Session.SetJson("cart", Cart);
+
+            return RedirectToPage(new { returnUrl = returnUrl });
+        }
     }
 }
